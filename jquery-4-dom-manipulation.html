@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#box{
+			background: #333;
+			color: #fff;
+			width: 300px;
+			height: 90px;
+			padding: 40px;
+			text-align: center;
+		}
+		#box2{
+			background: red;
+			width: 100px;
+			height: 100px;
+			position: relative;
+		}
+	</style>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	// ***************
+	// $('#form').submit(function(){
+	// 	var x = $('#name').val();
+	// 	alert(x);
+	// });
+	// ***************
+	// $('#btnFadeOut').click(function(){
+	// 	$('#box').fadeOut();
+	// });
+	// ***************
+	// $('#btnFadeOut').click(function(){
+	// 	$('#box').fadeOut(3000);
+	// });
+	// ***************
+	$('#btnFadeOut').click(function(){
+		$('#box').fadeOut(3000,function(){
+			$('#btnFadeOut').text('Gone');
+		});
+	});
+	// ***************
+	$('#btnFadeIn').click(function(){
+		$('#box').fadeIn(3000,function(){
+			$('#btnFadeIn').text('Gone');
+		});
+	});
+	// ***************
+	$('#btnFadeTog').click(function(){
+		$('#box').fadeToggle(3000);
+	});
+	// ***************
+	$('#btnSlideUp').click(function(){
+		$('#box').slideUp(3000);
+	});
+	// ***************
+	$('#btnSlideDown').click(function(){
+		$('#box').slideDown(3000);
+	});
+	// ***************
+	$('#btnSlideTog').click(function(){
+		$('#box').slideToggle(3000);
+	});
+	// ***************
+	$('#btnStop').click(function(){
+		$('#box').stop();
+	});
+	// ***************
+	$('#moveLeft').click(function(){
+		$('#box2').animate({
+			left:500,
+			width:'200px',
+			height:'200px',
+			opacity:0.5,
+		});
+	});
+	// ***************
+	$('#moveRight').click(function(){
+		$('#box2').animate({
+			left:0,
+			width:'100px',
+			height:'100px',
+			opacity:1,
+		});
+	});
+	// ***************
+	$('#moveAround').click(function(){
+		$('#box2').animate({
+			left:300,
+		});
+		$('#box2').animate({
+			top:300,
+		});
+		$('#box2').animate({
+			left:0,
+			top:300,
+		});
+		$('#box2').animate({
+			left:0,
+			top:0,
+		});
+	});
+	
+});
+
+</script>
+</head>
+<body>
+	<div id="container">
+		<button id="btnFadeOut" class="btnClass">Fade Out</button>
+		<button id="btnFadeIn" class="btnClass">Fade In</button>
+		<button id="btnFadeTog" class="btnClass">Fade Toggel</button>
+		<br>
+		<button id="btnSlideUp" class="btnClass">Slide Up</button>
+		<button id="btnSlideDown" class="btnClass">Slide Down</button>
+		<button id="btnSlideTog" class="btnClass">Slide Toggel</button>
+		<button id="btnStop" class="btnClass">Stop</button>
+		<br><br>
+		<div id="box"><h1>Hello World</h1></div>
+		<br>
+		<button id="moveLeft" >Move Left</button>
+		<button id="moveRight" >Move Right</button>
+		<button id="moveAround" >Move Around</button>
+		<br><br>
+		<div id="box2" ></div>
+
+	</div>
+</body>
+</html>

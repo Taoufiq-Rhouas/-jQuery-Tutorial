@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+	</style>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	// $('#btn1').click(function(){
+	// 	// $('p').css('color','red');
+	// 	$('p').hide();
+	// });
+	// ***************
+	// $('#btn2').click(function(){
+	// 	$('p').show();
+	// });
+	// ***************
+	// $('#btn1').click(function(){
+	// 	$('p').toggle();
+	// });
+	// ***************
+	// $('#btn1').on('click',function(){
+	// 	$('p').toggle();
+	// });
+	// ***************
+	// $('#btn1').dblclick(function(){
+	// 	$('p').toggle();
+	// });
+	// ***************
+	// $('#btn1').hover(function(){
+	// 	$('p').toggle();
+	// });
+	// ***************
+	// $('#btn1').on('mouseenter',function(){
+	// 	$('p').toggle();
+	// });
+	// ***************
+	// $('#btn1').on('mouseleave',function(){
+	// 	$('p').toggle();
+	// });
+	// ***************
+	// $('#btn1').on('mousemove',function(){
+	// 	$('p').toggle();
+	// });
+	// ***************
+	// $('#btn1').click(function(){
+	// 	alert("Clicked");
+	// });
+	// ***************
+	// $('#btn1').click(function(e){
+	// 	alert(e);
+	// });
+	// ***************
+	// $('#btn1').click(function(e){
+	// 	alert(e.currentTarget);
+	// });
+	// ***************
+	// $('#btn1').click(function(e){
+	// 	alert(e.currentTarget.id);
+	// });
+	// ***************
+	// $('#btn1').click(function(e){
+	// 	alert(e.currentTarget.className);
+	// });
+	// ***************
+	// $('#btn1').click(function(e){
+	// 	alert(e.currentTarget.innerHTML);
+	// });
+	// ***************
+	// $('#btn1').click(function(e){
+	// 	alert(e.currentTarget.outerHTML);
+	// });
+	// ***************
+	// $('input').focus(function(){
+	// 	alert('Focused');
+	// });
+	// ***************
+	$('input').focus(function(){
+		$(':text').css('background-color','yellow');
+	});
+	// // ***************
+	// $('input').focus(function(){
+	// 	$(this).css('background-color','yellow');
+	// });
+	// // ***************
+	// $('input').blur(function(){
+	// 	$(this).css('background-color','white');
+	// });
+	// ***************
+	// $('select#gender').change(function(){
+	// 	$(this).css('background-color','yellow');
+	// });
+	// ***************
+	$('#form').submit(function(){
+		var x = $('#name').val();
+		alert(x);
+	});
+	
+});
+
+</script>
+</head>
+<body>
+	<div id="container">
+		<button id="btn1" class="btnClass">Button 1</button>
+		<button id="btn2" class="btnClass">Button 2</button>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, 
+			perspiciatis tenetur. Eveniet assumenda modi voluptates inventore totam 
+			dolorum ab facilis neque laudantium, quibu
+			sdam debitis quas corporis ad, numquam voluptatibus temporibus.</p>
+
+		<form id="form">
+			<label>Name:</label><br>
+			<input type="text" id="name" name="name">
+			<br>
+			<label>Email:</label><br>
+			<input type="text" id="email" name="email">
+			<br>
+			<label>Gender</label><br>
+			<select id="gender" name="gender" >
+				<option value="male">Male</option>
+				<option value="femal">Femal</option>
+			</select>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+
+	</div>
+</body>
+</html>
